@@ -67,6 +67,8 @@ runs {
         modSource(main)
     }
 
+    // KTS NOTE: It could be considered to add Kotlin DSL for these 4 in the NF gradle plugin.
+    //           That way, you could use `client { ... }` etc, and it should only be a few lines of code.
     named("client") {
         // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
         systemProperty("forge.enabledGameTestNamespaces", mod_id)
