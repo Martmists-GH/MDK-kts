@@ -69,21 +69,21 @@ runs {
 
     // KTS NOTE: It could be considered to add Kotlin DSL for these 4 in the NF gradle plugin.
     //           That way, you could use `client { ... }` etc, and it should only be a few lines of code.
-    named("client") {
+    val client by creating {
         // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
         systemProperty("forge.enabledGameTestNamespaces", mod_id)
     }
 
-    named("server") {
+    val server by creating {
         systemProperty("forge.enabledGameTestNamespaces", mod_id)
         programArgument("--nogui")
     }
 
-    named("gameTestServer") {
+    val gameTestServer by creating {
         systemProperty("forge.enabledGameTestNamespaces", mod_id)
     }
 
-    named("data") {
+    val data by creating {
         // example of overriding the workingDirectory set in configureEach above, uncomment if you want to use it
         // workingDirectory = project.file('run-data')
 
