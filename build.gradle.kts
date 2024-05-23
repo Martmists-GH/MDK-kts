@@ -42,7 +42,7 @@ java {
 
 // minecraft {
     // accessTransformers.file(rootProject.file("src/main/resources/META-INF/accesstransformer.cfg"))
-    // accessTransformers.entry("public", "net.minecraft.client.Minecraft", "textureManager")
+    // accessTransformers.entry("public", "net.minecraft.client.Minecraft", "textureManager", "#", "textureManager")
 // }
 
 
@@ -162,8 +162,8 @@ tasks {
             "mod_authors" to mod_authors,
             "mod_description" to mod_description
         )
-
         inputs.properties(replaceProperties)
+
         filesMatching("META-INF/neoforge.mods.toml") {
             expand(replaceProperties)
         }
