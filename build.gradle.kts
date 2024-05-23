@@ -42,7 +42,7 @@ java {
 
 // minecraft {
     // accessTransformers.file(rootProject.file("src/main/resources/META-INF/accesstransformer.cfg"))
-    // accessTransformers.entry("public", "net.minecraft.client.Minecraft", "textureManager", "#", "textureManager")
+    // accessTransformers.entry("public net.minecraft.client.Minecraft textureManager # textureManager")
 // }
 
 
